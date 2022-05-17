@@ -1,0 +1,58 @@
+# PurchaseCorrectiveInvoice
+
+### Endpoint Availability  * Accounting Plus: 🇪🇸  ### Access Control Restrictions  Requires the authenticated user to have any of the following roles in the area `Purchases`: Full Access, Restricted Access
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **str** | The unique identifier for the item | [optional] 
+**displayed_as** | **str** | The name of the resource | [optional] 
+**path** | **str** | The API path for the resource | [optional] 
+**created_at** | **datetime** | The datetime when the item was created | [optional] 
+**updated_at** | **datetime** | The datetime when the item was last updated | [optional] 
+**links** | [**list[Link]**](Link.md) | Links for the resource | [optional] 
+**editable** | **bool** | Indicates whether artefact can be edited | [optional] 
+**transaction** | [**Transaction**](Transaction.md) |  | [optional] 
+**transaction_type** | [**Base**](Base.md) |  | [optional] 
+**contact** | [**Contact**](Contact.md) |  | [optional] 
+**deleted_at** | **datetime** | The datetime when the item was deleted | [optional] 
+**contact_name** | **str** | The name of the contact when the invoice was created | [optional] 
+**contact_reference** | **str** | The reference of the contact when the invoice was created | [optional] 
+**date** | **date** | The date of the invoice | [optional] 
+**due_date** | **date** | The due date of the invoice | [optional] 
+**reference** | **str** | The reference for the invoice | [optional] 
+**vendor_reference** | **str** | The vendor reference for the invoice | [optional] 
+**notes** | **str** | Invoice notes | [optional] 
+**total_quantity** | **float** | The total quantity of the invoice | [optional] 
+**net_amount** | **float** | The net amount of the invoice | [optional] 
+**tax_amount** | **float** | The tax amount of the invoice | [optional] 
+**total_amount** | **float** | The total amount of the invoice | [optional] 
+**payments_allocations_total_amount** | **float** | The total amount of all payments and allocations | [optional] 
+**payments_allocations_total_discount** | **float** | The total discount of all payments and allocations | [optional] 
+**total_paid** | **float** | The total paid amount of the invoice including any payments, allocations and discounts | [optional] 
+**outstanding_amount** | **float** | The outstanding amount of the invoice | [optional] 
+**currency** | [**Base**](Base.md) |  | [optional] 
+**exchange_rate** | **float** | The exchange rate for the invoice | [optional] 
+**inverse_exchange_rate** | **str** | The inverse exchange rate for the credit note | [optional] 
+**base_currency_net_amount** | **float** | The net amount of the invoice in base currency | [optional] 
+**base_currency_tax_amount** | **float** | The tax amount of the invoice in base currency | [optional] 
+**base_currency_total_amount** | **float** | The total amount of the invoice in base currency | [optional] 
+**base_currency_outstanding_amount** | **float** | The outstanding amount of the invoice in base currency | [optional] 
+**status** | [**Base**](Base.md) |  | [optional] 
+**void_reason** | **str** | The reason the invoice was voided | [optional] 
+**invoice_lines** | [**list[PurchaseInvoiceLineItem]**](PurchaseInvoiceLineItem.md) | The invoice lines of the invoice | [optional] 
+**tax_analysis** | [**list[ArtefactTaxAnalysis]**](ArtefactTaxAnalysis.md) | The invoice tax analysis (Optional for Spain, restricted for all other regions) | [optional] 
+**detailed_tax_analysis** | [**ArtefactDetailedTaxAnalysis**](ArtefactDetailedTaxAnalysis.md) |  | [optional] 
+**payments_allocations** | [**list[PaymentAllocation]**](PaymentAllocation.md) | The associated payments and allocations | [optional] 
+**last_paid** | **date** | The date of the last payment | [optional] 
+**withholding_tax_rate** | **float** | IRPF withheld Tax Rate (Spain only) | [optional] 
+**withholding_tax_amount** | **float** | IRPF withheld Tax Amount (Spain only) | [optional] 
+**base_currency_withholding_tax_amount** | **float** | IRPF withheld Tax Amount (Spain only) in the base currency | [optional] 
+**original_invoice** | [**Generic**](Generic.md) |  | [optional] 
+**original_invoice_number** | **str** | The number relating to the original invoice (Spain only) | [optional] 
+**original_invoice_date** | **str** | The Invoice date relating to the original invoice (Spain only) | [optional] 
+**tax_reconciled** | **bool** | Indicates if the artefact is tax reconciled or not. | [optional] 
+**_import** | **bool** | Indicates whether import rules are applied to the artefact. Only used for Accounting businesses, where the vendor is flagged as importer. | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+

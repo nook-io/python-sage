@@ -27,7 +27,7 @@ from six.moves.urllib.parse import quote
 from sage.configuration import Configuration
 import sage.models
 from sage import rest
-from sage.exceptions import ApiValueError, ApiException
+from sage.exceptions import ApiValueError, ApiException, OAuth2TokenGetterError, OAuth2TokenSaverError
 
 
 class ApiClient(object):
@@ -65,8 +65,15 @@ class ApiClient(object):
     }
     _pool = None
 
-    def __init__(self, configuration=None, header_name=None, header_value=None,
-                 cookie=None, pool_threads=1):
+    def __init__(
+        self, 
+        configuration=None, 
+        header_name=None, 
+        header_value=None,
+        cookie=None, 
+        pool_threads=1,
+        oauth2_token_saver=None,
+        oauth2_token_getter=None,):
         if configuration is None:
             configuration = Configuration.get_default_copy()
         self.configuration = configuration
@@ -80,6 +87,8 @@ class ApiClient(object):
         # Set default User-Agent.
         self.user_agent = 'OpenAPI-Generator/1.0.0/python'
         self.client_side_validation = configuration.client_side_validation
+        self._oauth2_token_saver = oauth2_token_saver
+        self._oauth2_token_getter = oauth2_token_getter
 
     def __enter__(self):
         return self
@@ -664,3 +673,84 @@ class ApiClient(object):
             if klass_name:
                 instance = self.__deserialize(data, klass_name)
         return instance
+
+
+    def get_oauth2_token(self):
+        """
+        Get oauth2 token dictionary
+        :return: dict
+        """
+        if not self._oauth2_token_getter:
+            raise OAuth2TokenGetterError(
+                "Invalid oauth2_token_getter={!r} function".format(
+                    self._oauth2_token_getter
+                )
+            )
+        return self._oauth2_token_getter()
+
+    def set_oauth2_token(self, token):
+        """
+        Set oauth2 token
+        :param dict token: standard token dictionary
+        """
+        if not self._oauth2_token_saver:
+            raise OAuth2TokenSaverError(
+                "Invalid oauth2_token_saver={!r} function".format(
+                    self._oauth2_token_saver
+                )
+            )
+        self._oauth2_token_saver(token)
+
+    def refresh_oauth2_token(self):
+        """
+        Force refresh oauth2 token
+        :return: new oauth2 token
+        """
+        oauth2_token = self.configuration.oauth2_token
+        oauth2_token.update_token(**self.get_oauth2_token())
+        if oauth2_token.refresh_access_token(self):
+            return self.get_oauth2_token()
+
+    def revoke_oauth2_token(self):
+        """
+        Force revoke oauth2 token
+        :return: empty oauth2 token
+        """
+        oauth2_token = self.configuration.oauth2_token
+        oauth2_token.update_token(**self.get_oauth2_token())
+        if oauth2_token.revoke_access_token(self):
+            return self.get_oauth2_token()
+
+    def get_client_credentials_token(self, app_store_billing=False):
+        """
+        Obtain oauth2 token using client credentials grant type
+        :return: oauth2 token
+        """
+        oauth2_token = self.configuration.oauth2_token
+        if oauth2_token.get_client_credentials_access_token(self, app_store_billing):
+            return self.get_oauth2_token()
+
+    def oauth2_token_getter(self, token_getter):
+        """
+        A decorator to register a callback function for getting oauth2 token
+
+        It is necessary for token synchronisation across the application code.
+
+        :param token_getter: the callback function returning oauth2 token dictionary.
+        :return: token_getter to allow this method be used as decorator
+        """
+        self._oauth2_token_getter = token_getter
+        return token_getter
+
+    def oauth2_token_saver(self, token_saver):
+        """
+        A decorator to register a callback function for saving refreshed
+        token while the old token has expired
+
+        It is necessary for using the automatic refresh mechanism.
+
+        :param token_saver: the callback function accepting `token` argument.
+        :return: token_saver to allow this method be used as decorator
+        """
+        self._oauth2_token_saver = token_saver
+        return token_saver

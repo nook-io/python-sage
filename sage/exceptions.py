@@ -118,3 +118,23 @@ def render_path(path_to_item):
         else:
             result += "['{0}']".format(pth)
     return result
+
+class OAuth2Error(OpenApiException):
+    """The base exception class for all OAuth2 exception"""
+
+class AccessTokenExpiredError(OAuth2Error):
+    """
+    Exception for invalid access token
+    """
+
+
+class OAuth2TokenGetterError(OAuth2Error):
+    """
+    Exception for invalid oauth2 token getter function
+    """
+
+
+class OAuth2TokenSaverError(OAuth2Error):
+    """
+    Exception for invalid oauth2 token saver function
+    """

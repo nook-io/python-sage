@@ -58,6 +58,7 @@ class Configuration(object):
                  api_key=None, api_key_prefix=None,
                  username=None, password=None,
                  discard_unknown_keys=False,
+                 oauth2_token=None
                  ):
         """Constructor
         """
@@ -87,6 +88,9 @@ class Configuration(object):
         self.password = password
         """Password for HTTP basic authentication
         """
+
+        self.oauth2_token = oauth2_token
+
         self.discard_unknown_keys = discard_unknown_keys
         self.logger = {}
         """Logging Settings

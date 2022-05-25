@@ -128,7 +128,7 @@ class ServicesApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ["OAuth2"]  # noqa: E501
 
         return self.api_client.call_api(
             '/services/{key}', 'DELETE',
@@ -272,7 +272,7 @@ class ServicesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ["OAuth2"]  # noqa: E501
 
         return self.api_client.call_api(
             '/services', 'GET',
@@ -391,7 +391,7 @@ class ServicesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ["OAuth2"]  # noqa: E501
 
         return self.api_client.call_api(
             '/services/{key}', 'GET',
@@ -509,7 +509,7 @@ class ServicesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ["OAuth2"]  # noqa: E501
 
         return self.api_client.call_api(
             '/services', 'POST',
@@ -636,7 +636,7 @@ class ServicesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ["OAuth2"]  # noqa: E501
 
         return self.api_client.call_api(
             '/services/{key}', 'PUT',

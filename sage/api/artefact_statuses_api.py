@@ -142,7 +142,7 @@ class ArtefactStatusesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ["OAuth2"]  # noqa: E501
 
         return self.api_client.call_api(
             '/artefact_statuses', 'GET',
@@ -261,7 +261,7 @@ class ArtefactStatusesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ["OAuth2"]  # noqa: E501
 
         return self.api_client.call_api(
             '/artefact_statuses/{key}', 'GET',

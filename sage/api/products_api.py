@@ -128,7 +128,7 @@ class ProductsApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ["OAuth2"]  # noqa: E501
 
         return self.api_client.call_api(
             '/products/{key}', 'DELETE',
@@ -272,7 +272,7 @@ class ProductsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ["OAuth2"]  # noqa: E501
 
         return self.api_client.call_api(
             '/products', 'GET',
@@ -391,7 +391,7 @@ class ProductsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ["OAuth2"]  # noqa: E501
 
         return self.api_client.call_api(
             '/products/{key}', 'GET',
@@ -509,7 +509,7 @@ class ProductsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ["OAuth2"]  # noqa: E501
 
         return self.api_client.call_api(
             '/products', 'POST',
@@ -636,7 +636,7 @@ class ProductsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ["OAuth2"]  # noqa: E501
 
         return self.api_client.call_api(
             '/products/{key}', 'PUT',

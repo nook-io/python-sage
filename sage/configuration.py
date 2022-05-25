@@ -58,6 +58,7 @@ class Configuration(object):
                  api_key=None, api_key_prefix=None,
                  username=None, password=None,
                  discard_unknown_keys=False,
+                 oauth2_token=None
                  ):
         """Constructor
         """
@@ -87,6 +88,9 @@ class Configuration(object):
         self.password = password
         """Password for HTTP basic authentication
         """
+
+        self.oauth2_token = oauth2_token
+
         self.discard_unknown_keys = discard_unknown_keys
         self.logger = {}
         """Logging Settings
@@ -308,13 +312,14 @@ class Configuration(object):
             basic_auth=username + ':' + password
         ).get('authorization')
 
-    def auth_settings(self):
+    def auth_settings(self, auth_type):
         """Gets Auth Settings dict for api client.
 
         :return: The Auth Settings information dict.
         """
-        auth = {}
-        return auth
+        auth_type = str(auth_type).lower()
+        if auth_type == "oauth2":
+            return self.oauth2_token.get_auth_settings()
 
     def to_debug_report(self):
         """Gets the essential information for debugging.

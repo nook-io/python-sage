@@ -128,7 +128,7 @@ class SalesQuotesApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ["OAuth2"]  # noqa: E501
 
         return self.api_client.call_api(
             '/sales_quotes/{key}', 'DELETE',
@@ -292,7 +292,7 @@ class SalesQuotesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ["OAuth2"]  # noqa: E501
 
         return self.api_client.call_api(
             '/sales_quotes', 'GET',
@@ -416,7 +416,7 @@ class SalesQuotesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ["OAuth2"]  # noqa: E501
 
         return self.api_client.call_api(
             '/sales_quotes/{key}', 'GET',
@@ -534,7 +534,7 @@ class SalesQuotesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ["OAuth2"]  # noqa: E501
 
         return self.api_client.call_api(
             '/sales_quotes', 'POST',
@@ -661,7 +661,7 @@ class SalesQuotesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ["OAuth2"]  # noqa: E501
 
         return self.api_client.call_api(
             '/sales_quotes/{key}', 'PUT',

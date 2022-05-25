@@ -128,7 +128,7 @@ class BankTransfersApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ["OAuth2"]  # noqa: E501
 
         return self.api_client.call_api(
             '/bank_transfers/{key}', 'DELETE',
@@ -277,7 +277,7 @@ class BankTransfersApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ["OAuth2"]  # noqa: E501
 
         return self.api_client.call_api(
             '/bank_transfers', 'GET',
@@ -401,7 +401,7 @@ class BankTransfersApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ["OAuth2"]  # noqa: E501
 
         return self.api_client.call_api(
             '/bank_transfers/{key}', 'GET',
@@ -519,7 +519,7 @@ class BankTransfersApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ["OAuth2"]  # noqa: E501
 
         return self.api_client.call_api(
             '/bank_transfers', 'POST',
@@ -646,7 +646,7 @@ class BankTransfersApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ["OAuth2"]  # noqa: E501
 
         return self.api_client.call_api(
             '/bank_transfers/{key}', 'PUT',

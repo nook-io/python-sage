@@ -128,7 +128,7 @@ class PurchaseInvoicesApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ["OAuth2"]  # noqa: E501
 
         return self.api_client.call_api(
             '/purchase_invoices/{key}', 'DELETE',
@@ -302,7 +302,7 @@ class PurchaseInvoicesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ["OAuth2"]  # noqa: E501
 
         return self.api_client.call_api(
             '/purchase_invoices', 'GET',
@@ -436,7 +436,7 @@ class PurchaseInvoicesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ["OAuth2"]  # noqa: E501
 
         return self.api_client.call_api(
             '/purchase_invoices/{key}', 'GET',
@@ -554,7 +554,7 @@ class PurchaseInvoicesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ["OAuth2"]  # noqa: E501
 
         return self.api_client.call_api(
             '/purchase_invoices', 'POST',
@@ -668,7 +668,7 @@ class PurchaseInvoicesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ["OAuth2"]  # noqa: E501
 
         return self.api_client.call_api(
             '/purchase_invoices/{key}/release', 'POST',
@@ -795,7 +795,7 @@ class PurchaseInvoicesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ["OAuth2"]  # noqa: E501
 
         return self.api_client.call_api(
             '/purchase_invoices/{key}', 'PUT',

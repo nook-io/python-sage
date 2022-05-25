@@ -101,6 +101,8 @@ from sage.api.unallocated_artefacts_api import UnallocatedArtefactsApi
 
 # import ApiClient
 from sage.api_client import ApiClient
+from sage.oauth2 import TokenApi
+from sage.oauth2 import OAuth2Token
 from sage.configuration import Configuration
 from sage.exceptions import OpenApiException
 from sage.exceptions import ApiTypeError

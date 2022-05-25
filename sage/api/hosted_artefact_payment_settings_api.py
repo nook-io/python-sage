@@ -128,7 +128,7 @@ class HostedArtefactPaymentSettingsApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ["OAuth2"]  # noqa: E501
 
         return self.api_client.call_api(
             '/hosted_artefact_payment_settings/{key}', 'DELETE',
@@ -257,7 +257,7 @@ class HostedArtefactPaymentSettingsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ["OAuth2"]  # noqa: E501
 
         return self.api_client.call_api(
             '/hosted_artefact_payment_settings', 'GET',
@@ -376,7 +376,7 @@ class HostedArtefactPaymentSettingsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ["OAuth2"]  # noqa: E501
 
         return self.api_client.call_api(
             '/hosted_artefact_payment_settings/{key}', 'GET',
@@ -494,7 +494,7 @@ class HostedArtefactPaymentSettingsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ["OAuth2"]  # noqa: E501
 
         return self.api_client.call_api(
             '/hosted_artefact_payment_settings', 'POST',

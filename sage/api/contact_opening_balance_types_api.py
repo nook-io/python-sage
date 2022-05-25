@@ -142,7 +142,7 @@ class ContactOpeningBalanceTypesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ["OAuth2"]  # noqa: E501
 
         return self.api_client.call_api(
             '/contact_opening_balance_types', 'GET',
@@ -261,7 +261,7 @@ class ContactOpeningBalanceTypesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ["OAuth2"]  # noqa: E501
 
         return self.api_client.call_api(
             '/contact_opening_balance_types/{key}', 'GET',

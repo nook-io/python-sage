@@ -137,7 +137,7 @@ class SalesCreditNotesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ["OAuth2"]  # noqa: E501
 
         return self.api_client.call_api(
             '/sales_credit_notes/{key}', 'DELETE',
@@ -311,7 +311,7 @@ class SalesCreditNotesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ["OAuth2"]  # noqa: E501
 
         return self.api_client.call_api(
             '/sales_credit_notes', 'GET',
@@ -445,7 +445,7 @@ class SalesCreditNotesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ["OAuth2"]  # noqa: E501
 
         return self.api_client.call_api(
             '/sales_credit_notes/{key}', 'GET',
@@ -563,7 +563,7 @@ class SalesCreditNotesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ["OAuth2"]  # noqa: E501
 
         return self.api_client.call_api(
             '/sales_credit_notes', 'POST',
@@ -677,7 +677,7 @@ class SalesCreditNotesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ["OAuth2"]  # noqa: E501
 
         return self.api_client.call_api(
             '/sales_credit_notes/{key}/release', 'POST',
@@ -804,7 +804,7 @@ class SalesCreditNotesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ["OAuth2"]  # noqa: E501
 
         return self.api_client.call_api(
             '/sales_credit_notes/{key}', 'PUT',

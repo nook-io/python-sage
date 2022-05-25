@@ -152,7 +152,7 @@ class UnallocatedArtefactsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ["OAuth2"]  # noqa: E501
 
         return self.api_client.call_api(
             '/unallocated_artefacts', 'GET',
@@ -271,7 +271,7 @@ class UnallocatedArtefactsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ["OAuth2"]  # noqa: E501
 
         return self.api_client.call_api(
             '/unallocated_artefacts/{key}', 'GET',

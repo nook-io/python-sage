@@ -317,8 +317,9 @@ class Configuration(object):
 
         :return: The Auth Settings information dict.
         """
-        auth = {}
-        return auth
+        auth_type = str(auth_type).lower()
+        if auth_type == "oauth2":
+            return self.oauth2_token.get_auth_settings()
 
     def to_debug_report(self):
         """Gets the essential information for debugging.

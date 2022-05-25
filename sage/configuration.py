@@ -312,7 +312,7 @@ class Configuration(object):
             basic_auth=username + ':' + password
         ).get('authorization')
 
-    def auth_settings(self):
+    def auth_settings(self, auth_type):
         """Gets Auth Settings dict for api client.
 
         :return: The Auth Settings information dict.

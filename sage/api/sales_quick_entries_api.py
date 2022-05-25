@@ -128,7 +128,7 @@ class SalesQuickEntriesApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ["OAuth2"]  # noqa: E501
 
         return self.api_client.call_api(
             '/sales_quick_entries/{key}', 'DELETE',
@@ -302,7 +302,7 @@ class SalesQuickEntriesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ["OAuth2"]  # noqa: E501
 
         return self.api_client.call_api(
             '/sales_quick_entries', 'GET',
@@ -431,7 +431,7 @@ class SalesQuickEntriesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ["OAuth2"]  # noqa: E501
 
         return self.api_client.call_api(
             '/sales_quick_entries/{key}', 'GET',
@@ -549,7 +549,7 @@ class SalesQuickEntriesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ["OAuth2"]  # noqa: E501
 
         return self.api_client.call_api(
             '/sales_quick_entries', 'POST',
@@ -676,7 +676,7 @@ class SalesQuickEntriesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ["OAuth2"]  # noqa: E501
 
         return self.api_client.call_api(
             '/sales_quick_entries/{key}', 'PUT',

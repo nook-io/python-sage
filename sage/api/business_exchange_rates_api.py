@@ -128,7 +128,7 @@ class BusinessExchangeRatesApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ["OAuth2"]  # noqa: E501
 
         return self.api_client.call_api(
             '/business_exchange_rates/{key}', 'DELETE',
@@ -252,7 +252,7 @@ class BusinessExchangeRatesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ["OAuth2"]  # noqa: E501
 
         return self.api_client.call_api(
             '/business_exchange_rates', 'GET',
@@ -371,7 +371,7 @@ class BusinessExchangeRatesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ["OAuth2"]  # noqa: E501
 
         return self.api_client.call_api(
             '/business_exchange_rates/{key}', 'GET',
@@ -489,7 +489,7 @@ class BusinessExchangeRatesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ["OAuth2"]  # noqa: E501
 
         return self.api_client.call_api(
             '/business_exchange_rates', 'POST',
@@ -616,7 +616,7 @@ class BusinessExchangeRatesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ["OAuth2"]  # noqa: E501
 
         return self.api_client.call_api(
             '/business_exchange_rates/{key}', 'PUT',

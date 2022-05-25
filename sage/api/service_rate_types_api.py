@@ -128,7 +128,7 @@ class ServiceRateTypesApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ["OAuth2"]  # noqa: E501
 
         return self.api_client.call_api(
             '/service_rate_types/{key}', 'DELETE',
@@ -262,7 +262,7 @@ class ServiceRateTypesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ["OAuth2"]  # noqa: E501
 
         return self.api_client.call_api(
             '/service_rate_types', 'GET',
@@ -381,7 +381,7 @@ class ServiceRateTypesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ["OAuth2"]  # noqa: E501
 
         return self.api_client.call_api(
             '/service_rate_types/{key}', 'GET',
@@ -499,7 +499,7 @@ class ServiceRateTypesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ["OAuth2"]  # noqa: E501
 
         return self.api_client.call_api(
             '/service_rate_types', 'POST',
@@ -626,7 +626,7 @@ class ServiceRateTypesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ["OAuth2"]  # noqa: E501
 
         return self.api_client.call_api(
             '/service_rate_types/{key}', 'PUT',

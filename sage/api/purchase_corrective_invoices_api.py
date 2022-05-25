@@ -128,7 +128,7 @@ class PurchaseCorrectiveInvoicesApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ["OAuth2"]  # noqa: E501
 
         return self.api_client.call_api(
             '/purchase_corrective_invoices/{key}', 'DELETE',
@@ -302,7 +302,7 @@ class PurchaseCorrectiveInvoicesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ["OAuth2"]  # noqa: E501
 
         return self.api_client.call_api(
             '/purchase_corrective_invoices', 'GET',
@@ -431,7 +431,7 @@ class PurchaseCorrectiveInvoicesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ["OAuth2"]  # noqa: E501
 
         return self.api_client.call_api(
             '/purchase_corrective_invoices/{key}', 'GET',
@@ -549,7 +549,7 @@ class PurchaseCorrectiveInvoicesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ["OAuth2"]  # noqa: E501
 
         return self.api_client.call_api(
             '/purchase_corrective_invoices', 'POST',
@@ -676,7 +676,7 @@ class PurchaseCorrectiveInvoicesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ["OAuth2"]  # noqa: E501
 
         return self.api_client.call_api(
             '/purchase_corrective_invoices/{key}', 'PUT',

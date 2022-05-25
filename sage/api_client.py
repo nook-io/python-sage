@@ -546,7 +546,9 @@ class ApiClient(object):
             return
 
         for auth in auth_settings:
-            auth_setting = self.configuration.auth_settings().get(auth)
+            auth_setting = self.configuration.auth_settings(auth)
+            if callable(auth_setting):
+                auth_setting = auth_setting(api_client=self)
             if auth_setting:
                 if auth_setting['in'] == 'cookie':
                     headers['Cookie'] = auth_setting['value']

@@ -271,12 +271,14 @@ class OAuth2Token:
     def update_token(
         self,
         access_token,
-        scope,
         expires_in,
         token_type,
-        expires_at=None,
-        refresh_token=None,
-        id_token=None,
+        refresh_token,
+        refresh_token_expires_in,
+        scope,
+        requested_by_id
+        # expires_at=None,
+        # id_token=None,
     ):
         """
         Set new auth2 token details
@@ -289,9 +291,9 @@ class OAuth2Token:
         :param id_token: str (optional)
         """
         self.access_token = access_token
-        self.expires_at = expires_at
+        self.expires_at = time.time()+expires_in
         self.expires_in = expires_in
-        self.id_token = id_token
+        # self.id_token = id_token
         self.refresh_token = refresh_token
         self.scope = scope
         self.token_type = token_type

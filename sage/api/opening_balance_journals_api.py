@@ -128,7 +128,7 @@ class OpeningBalanceJournalsApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ["OAuth2"]  # noqa: E501
 
         return self.api_client.call_api(
             '/opening_balance_journals/{key}', 'DELETE',
@@ -252,7 +252,7 @@ class OpeningBalanceJournalsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ["OAuth2"]  # noqa: E501
 
         return self.api_client.call_api(
             '/opening_balance_journals', 'GET',
@@ -371,7 +371,7 @@ class OpeningBalanceJournalsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ["OAuth2"]  # noqa: E501
 
         return self.api_client.call_api(
             '/opening_balance_journals/{key}', 'GET',
@@ -489,7 +489,7 @@ class OpeningBalanceJournalsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ["OAuth2"]  # noqa: E501
 
         return self.api_client.call_api(
             '/opening_balance_journals', 'POST',

@@ -128,7 +128,7 @@ class LedgerAccountOpeningBalancesApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ["OAuth2"]  # noqa: E501
 
         return self.api_client.call_api(
             '/ledger_account_opening_balances/{key}', 'DELETE',
@@ -257,7 +257,7 @@ class LedgerAccountOpeningBalancesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ["OAuth2"]  # noqa: E501
 
         return self.api_client.call_api(
             '/ledger_account_opening_balances', 'GET',
@@ -376,7 +376,7 @@ class LedgerAccountOpeningBalancesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ["OAuth2"]  # noqa: E501
 
         return self.api_client.call_api(
             '/ledger_account_opening_balances/{key}', 'GET',
@@ -494,7 +494,7 @@ class LedgerAccountOpeningBalancesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ["OAuth2"]  # noqa: E501
 
         return self.api_client.call_api(
             '/ledger_account_opening_balances', 'POST',
@@ -621,7 +621,7 @@ class LedgerAccountOpeningBalancesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ["OAuth2"]  # noqa: E501
 
         return self.api_client.call_api(
             '/ledger_account_opening_balances/{key}', 'PUT',

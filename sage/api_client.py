@@ -179,7 +179,9 @@ class ApiClient(object):
             body = self.sanitize_for_serialization(body)
 
         # request url
-        if _host is None:
+        if "oauth" in resource_path:
+            url = resource_path
+        elif _host is None:
             url = self.configuration.host + resource_path
         else:
             # use server/host defined in path or operation instead
@@ -299,11 +301,19 @@ class ApiClient(object):
         if data is None:
             return None
 
+        data_type = type(data) 
+        if data_type == str and klass.startswith('dict(') and "$error" in data:
+            raise ApiException(status=400)
+
         if type(klass) == str:
             if klass.startswith('list['):
                 sub_kls = re.match(r'list\[(.*)\]', klass).group(1)
-                return [self.__deserialize(sub_data, sub_kls)
-                        for sub_data in data]
+                if "$items" in data:
+                    return [self.__deserialize(sub_data, sub_kls)
+                            for sub_data in data["$items"]]
+                else:
+                    return [self.__deserialize(sub_data, sub_kls)
+                            for sub_data in data]
 
             if klass.startswith('dict('):
                 sub_kls = re.match(r'dict\(([^,]*), (.*)\)', klass).group(2)

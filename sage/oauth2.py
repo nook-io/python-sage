@@ -32,7 +32,7 @@ class TokenApi:
             "client_id": self.client_id,
             "client_secret": self.client_secret,
         }
-        response, status, headers = self.api_client.call_api(
+        response = self.api_client.call_api(
             self.refresh_token_url,
             "POST",
             header_params={
@@ -43,10 +43,10 @@ class TokenApi:
             auth_settings=None,  # important to prevent infinite recursive loop
             _preload_content=False,
         )
-        if status != 200:
+        if response.status != 200:
             # todo improve error handling
             raise Exception(
-                "refresh token status {} {} {!r}".format(status, response, headers)
+                "refresh token status {} {} {!r}".format(response.status, response.data, response.headers)
             )
         # todo validate response is json
         return self.parse_token_response(response)
@@ -62,7 +62,7 @@ class TokenApi:
             "client_id": self.client_id,
             "client_secret": self.client_secret,
         }
-        response, status, headers = self.api_client.call_api(
+        response = self.api_client.call_api(
             self.revoke_token_url,
             "POST",
             header_params={
@@ -73,12 +73,12 @@ class TokenApi:
             auth_settings=None,  # important to prevent infinite recursive loop
             _preload_content=False,
         )
-        if status != 200:
+        if response.status != 200:
             # todo improve error handling
             raise Exception(
-                "refresh token status {} {} {!r}".format(status, response, headers)
+                "refresh token status {} {} {!r}".format(response.status, response.data, response.headers)
             )
-        return status
+        return response.status
 
     def get_client_credentials_token(self, app_store_billing):
         """
@@ -92,7 +92,7 @@ class TokenApi:
         }
         if app_store_billing:
             post_data["scope"] = "marketplace.billing"
-        response, status, headers = self.api_client.call_api(
+        response = self.api_client.call_api(
             self.client_credentials_token_url,
             "POST",
             header_params={
@@ -103,10 +103,10 @@ class TokenApi:
             auth_settings=None,  # important to prevent infinite recursive loop
             _preload_content=False,
         )
-        if status != 200:
+        if response.status != 200:
             # todo improve error handling
             raise Exception(
-                "refresh token status {} {} {!r}".format(status, response, headers)
+                "refresh token status {} {} {!r}".format(response.status, response.data, response.headers)
             )
         # todo validate response is json
         return self.parse_token_response(response)
@@ -257,12 +257,12 @@ class OAuth2Token:
         token_api.revoke_token(self.refresh_token)
         new_token = {
             "access_token": None,
-            "refresh_token": None,
-            "scope": None,
-            "expires_at": None,
-            "expires_in": None,
+            "expires_in" : None,
             "token_type": "Bearer",
-            "id_token": None,
+            "refresh_token": None,
+            "refresh_token_expires_in": None,
+            "scope": None,
+            "requested_by_id": None
         }
         self.update_token(**new_token)
         api_client.set_oauth2_token(new_token)
@@ -276,8 +276,8 @@ class OAuth2Token:
         refresh_token,
         refresh_token_expires_in,
         scope,
-        requested_by_id
-        # expires_at=None,
+        requested_by_id,
+        expires_at=None,
         # id_token=None,
     ):
         """
@@ -291,12 +291,13 @@ class OAuth2Token:
         :param id_token: str (optional)
         """
         self.access_token = access_token
-        self.expires_at = time.time()+expires_in
+        self.expires_at = expires_at if expires_at else (time.time()+expires_in if expires_in else expires_in)
         self.expires_in = expires_in
         # self.id_token = id_token
         self.refresh_token = refresh_token
         self.scope = scope
-        self.token_type = token_type
+        self.token_type = token_type 
+        self.token_type = 'Bearer' if self.token_type == 'bearer' else self.token_type
 
     def fetch_access_token(self, token_api, token_valid_from=None):
         """
@@ -325,4 +326,4 @@ class OAuth2Token:
         :param token_api: TokenApi instance
         :return: auth2 token dictionary as received from API.
         """
-        return token_api.refresh_token(self.refresh_token, self.scope)
+        return token_api.refresh_token(self.refresh_token)

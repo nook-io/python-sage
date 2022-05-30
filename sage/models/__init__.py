@@ -318,3 +318,11 @@ from sage.models.tax_type import TaxType
 from sage.models.transaction import Transaction
 from sage.models.transaction_origin import TransactionOrigin
 from sage.models.unallocated_artefact import UnallocatedArtefact
+from sage.models.business import Business
+from sage.models.country import Country
+from sage.models.put_businesses import PutBusinesses
+from sage.models.put_businesses_business import PutBusinessesBusiness
+from sage.models.put_user import PutUser
+from sage.models.put_user_user import PutUserUser
+from sage.models.subscription import Subscription
+from sage.models.user import User

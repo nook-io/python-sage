@@ -29,6 +29,7 @@ from sage.api.bank_deposits_api import BankDepositsApi
 from sage.api.bank_opening_balances_api import BankOpeningBalancesApi
 from sage.api.bank_reconciliations_api import BankReconciliationsApi
 from sage.api.bank_transfers_api import BankTransfersApi
+from sage.api.businesses_api import BusinessesApi
 from sage.api.business_activity_types_api import BusinessActivityTypesApi
 from sage.api.business_exchange_rates_api import BusinessExchangeRatesApi
 from sage.api.business_settings_api import BusinessSettingsApi
@@ -98,6 +99,7 @@ from sage.api.tax_types_api import TaxTypesApi
 from sage.api.transaction_types_api import TransactionTypesApi
 from sage.api.transactions_api import TransactionsApi
 from sage.api.unallocated_artefacts_api import UnallocatedArtefactsApi
+from sage.api.user_api import UserApi
 
 # import ApiClient
 from sage.api_client import ApiClient
@@ -414,4 +416,11 @@ from sage.models.tax_type import TaxType
 from sage.models.transaction import Transaction
 from sage.models.transaction_origin import TransactionOrigin
 from sage.models.unallocated_artefact import UnallocatedArtefact
-
+from sage.models.business import Business
+from sage.models.country import Country
+from sage.models.put_businesses import PutBusinesses
+from sage.models.put_businesses_business import PutBusinessesBusiness
+from sage.models.put_user import PutUser
+from sage.models.put_user_user import PutUserUser
+from sage.models.subscription import Subscription
+from sage.models.user import User

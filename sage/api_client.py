@@ -623,6 +623,8 @@ class ApiClient(object):
         :param string: str.
         :return: date.
         """
+        if string == "":
+            return None
         try:
             return parse(string).date()
         except ImportError:
@@ -641,6 +643,8 @@ class ApiClient(object):
         :param string: str.
         :return: datetime.
         """
+        if string == "":
+            return None
         try:
             return parse(string)
         except ImportError:

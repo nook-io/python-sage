@@ -108,7 +108,8 @@ class BankReconciliationsApi(object):
                 'async_req',
                 '_return_http_data_only',
                 '_preload_content',
-                '_request_timeout'
+                '_request_timeout',
+                '_business_id'
             ]
         )
 
@@ -150,6 +151,9 @@ class BankReconciliationsApi(object):
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
             ['application/json'])  # noqa: E501
+
+        if '_business_id' in local_var_params and local_var_params['_business_id'] is not None:  # noqa: E501
+            header_params['X-Business'] = local_var_params['_business_id']
 
         # Authentication setting
         auth_settings = ["OAuth2"]  # noqa: E501
@@ -233,7 +237,8 @@ class BankReconciliationsApi(object):
                 'async_req',
                 '_return_http_data_only',
                 '_preload_content',
-                '_request_timeout'
+                '_request_timeout',
+                '_business_id'
             ]
         )
 
@@ -269,6 +274,9 @@ class BankReconciliationsApi(object):
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
             ['application/json'])  # noqa: E501
+
+        if '_business_id' in local_var_params and local_var_params['_business_id'] is not None:  # noqa: E501
+            header_params['X-Business'] = local_var_params['_business_id']
 
         # Authentication setting
         auth_settings = ["OAuth2"]  # noqa: E501
@@ -349,7 +357,8 @@ class BankReconciliationsApi(object):
                 'async_req',
                 '_return_http_data_only',
                 '_preload_content',
-                '_request_timeout'
+                '_request_timeout',
+                '_business_id'
             ]
         )
 
@@ -383,6 +392,9 @@ class BankReconciliationsApi(object):
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
             ['application/json'])  # noqa: E501
+
+        if '_business_id' in local_var_params and local_var_params['_business_id'] is not None:  # noqa: E501
+            header_params['X-Business'] = local_var_params['_business_id']
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
@@ -470,7 +482,8 @@ class BankReconciliationsApi(object):
                 'async_req',
                 '_return_http_data_only',
                 '_preload_content',
-                '_request_timeout'
+                '_request_timeout',
+                '_business_id'
             ]
         )
 
@@ -510,6 +523,9 @@ class BankReconciliationsApi(object):
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
             ['application/json'])  # noqa: E501
+
+        if '_business_id' in local_var_params and local_var_params['_business_id'] is not None:  # noqa: E501
+            header_params['X-Business'] = local_var_params['_business_id']
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501

@@ -41,7 +41,7 @@ class Contact(object):
         'links': 'list[Link]',
         'deleted_at': 'datetime',
         'balance': 'float',
-        'contact_types': 'list[Base]',
+        'contact_type_ids': 'list[Base]',
         'name': 'str',
         'reference': 'str',
         'default_sales_ledger_account': 'LedgerAccount',
@@ -84,7 +84,7 @@ class Contact(object):
         'links': 'links',
         'deleted_at': 'deleted_at',
         'balance': 'balance',
-        'contact_types': 'contact_types',
+        'contact_type_ids': 'contact_type_ids',
         'name': 'name',
         'reference': 'reference',
         'default_sales_ledger_account': 'default_sales_ledger_account',
@@ -118,7 +118,7 @@ class Contact(object):
         'cis_settings': 'cis_settings'
     }
 
-    def __init__(self, id=None, displayed_as=None, path=None, created_at=None, updated_at=None, links=None, deleted_at=None, balance=None, contact_types=None, name=None, reference=None, default_sales_ledger_account=None, default_sales_tax_rate=None, default_purchase_ledger_account=None, tax_number=None, notes=None, locale=None, main_address=None, delivery_address=None, main_contact_person=None, bank_account_details=None, credit_limit=None, credit_days=None, credit_terms_and_conditions=None, product_sales_price_type=None, source_guid=None, currency=None, aux_reference=None, registered_number=None, deletable=None, tax_treatment=None, email=None, tax_calculation=None, auxiliary_account=None, gdpr_obfuscated=None, system=None, has_unfinished_recurring_invoices=None, cis_registered=None, ni_based=None, cis_settings=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, displayed_as=None, path=None, created_at=None, updated_at=None, links=None, deleted_at=None, balance=None, contact_type_ids=None, name=None, reference=None, default_sales_ledger_account=None, default_sales_tax_rate=None, default_purchase_ledger_account=None, tax_number=None, notes=None, locale=None, main_address=None, delivery_address=None, main_contact_person=None, bank_account_details=None, credit_limit=None, credit_days=None, credit_terms_and_conditions=None, product_sales_price_type=None, source_guid=None, currency=None, aux_reference=None, registered_number=None, deletable=None, tax_treatment=None, email=None, tax_calculation=None, auxiliary_account=None, gdpr_obfuscated=None, system=None, has_unfinished_recurring_invoices=None, cis_registered=None, ni_based=None, cis_settings=None, local_vars_configuration=None):  # noqa: E501
         """Contact - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -132,7 +132,7 @@ class Contact(object):
         self._links = None
         self._deleted_at = None
         self._balance = None
-        self._contact_types = None
+        self._contact_type_ids = None
         self._name = None
         self._reference = None
         self._default_sales_ledger_account = None
@@ -182,8 +182,8 @@ class Contact(object):
             self.deleted_at = deleted_at
         if balance is not None:
             self.balance = balance
-        if contact_types is not None:
-            self.contact_types = contact_types
+        if contact_type_ids is not None:
+            self.contact_type_ids = contact_type_ids
         if name is not None:
             self.name = name
         if reference is not None:
@@ -432,7 +432,7 @@ class Contact(object):
         self._balance = balance
 
     @property
-    def contact_types(self):
+    def contact_type_ids(self):
         """Gets the contact_types of this Contact.  # noqa: E501
 
         The type of the contact. It has to be either CUSTOMER or VENDOR  # noqa: E501
@@ -440,10 +440,10 @@ class Contact(object):
         :return: The contact_types of this Contact.  # noqa: E501
         :rtype: list[Base]
         """
-        return self._contact_types
+        return self._contact_type_ids
 
-    @contact_types.setter
-    def contact_types(self, contact_types):
+    @contact_type_ids.setter
+    def contact_type_ids(self, contact_type_ids):
         """Sets the contact_types of this Contact.
 
         The type of the contact. It has to be either CUSTOMER or VENDOR  # noqa: E501
@@ -452,7 +452,7 @@ class Contact(object):
         :type: list[Base]
         """
 
-        self._contact_types = contact_types
+        self._contact_type_ids = contact_type_ids
 
     @property
     def name(self):

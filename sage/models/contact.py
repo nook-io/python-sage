@@ -41,7 +41,6 @@ class Contact(object):
         'links': 'list[Link]',
         'deleted_at': 'datetime',
         'balance': 'float',
-        'contact_type_ids': 'list[Base]',
         'contact_types': 'list[Base]',
         'name': 'str',
         'reference': 'str',

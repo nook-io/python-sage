@@ -424,3 +424,17 @@ from sage.models.put_user import PutUser
 from sage.models.put_user_user import PutUserUser
 from sage.models.subscription import Subscription
 from sage.models.user import User
+
+#Push 
+from sage.models.address_push import AddressPush
+from sage.models.attachment_push import AttachmentPush
+from sage.models.bank_account_push import BankAccountPush
+from sage.models.contact_push import ContactPush
+from sage.models.purchase_invoice_push import PurchaseInvoicePush
+from sage.models.purchase_invoice_line_item_push import PurchaseInvoiceLineItemPush
+from sage.models.purchase_credit_note_push import PurchaseCreditNotePush
+from sage.models.purchase_credit_note_line_item_push import PurchaseCreditNoteLineItemPush
+from sage.models.sales_invoice_push import SalesInvoicePush
+from sage.models.sales_invoice_line_item_push import SalesInvoiceLineItemPush
+from sage.models.sales_credit_note_push import SalesCreditNotePush
+from sage.models.sales_credit_note_line_item_push import SalesCreditNoteLineItemPush

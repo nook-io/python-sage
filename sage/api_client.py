@@ -733,7 +733,15 @@ class ApiClient(object):
         :return: empty oauth2 token
         """
         oauth2_token = self.configuration.oauth2_token
-        oauth2_token.update_token(**self.get_oauth2_token())
+        oauth2_token.update_token(**{
+            "access_token": None,
+            "expires_in" : None,
+            "token_type": "Bearer",
+            "refresh_token": None,
+            "refresh_token_expires_in": None,
+            "scope": None,
+            "requested_by_id": None
+        })
         if oauth2_token.revoke_access_token(self):
             return self.get_oauth2_token()
 

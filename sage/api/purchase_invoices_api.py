@@ -128,6 +128,10 @@ class PurchaseInvoicesApi(object):
         local_var_files = {}
 
         body_params = None
+
+        if '_business_id' in local_var_params and local_var_params['_business_id'] is not None:  # noqa: E501
+            header_params['X-Business'] = local_var_params['_business_id']
+
         # Authentication setting
         auth_settings = ["OAuth2"]  # noqa: E501
 

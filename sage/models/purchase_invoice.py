@@ -1045,8 +1045,8 @@ class PurchaseInvoice(object):
         :type: str
         """
         if (self.local_vars_configuration.client_side_validation and
-                reference is not None and len(reference) > 25):
-            raise ValueError("Invalid value for `reference`, length must be less than or equal to `25`")  # noqa: E501
+                reference is not None and len(reference) > 256):
+            raise ValueError("Invalid value for `reference`, length must be less than or equal to `256`")  # noqa: E501
 
         self._reference = reference
 

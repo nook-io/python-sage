@@ -1,8 +1,4 @@
 from __future__ import absolute_import
-
-# flake8: noqa
-
-# import apis into api package
 from sage.api.address_regions_api import AddressRegionsApi
 from sage.api.address_types_api import AddressTypesApi
 from sage.api.addresses_api import AddressesApi
@@ -41,7 +37,9 @@ from sage.api.eu_sales_descriptions_api import EUSalesDescriptionsApi
 from sage.api.email_settings_api import EmailSettingsApi
 from sage.api.exchange_rates_api import ExchangeRatesApi
 from sage.api.financial_settings_api import FinancialSettingsApi
-from sage.api.hosted_artefact_payment_settings_api import HostedArtefactPaymentSettingsApi
+from sage.api.hosted_artefact_payment_settings_api import (
+    HostedArtefactPaymentSettingsApi,
+)
 from sage.api.invoice_settings_api import InvoiceSettingsApi
 from sage.api.journal_code_types_api import JournalCodeTypesApi
 from sage.api.journal_codes_api import JournalCodesApi

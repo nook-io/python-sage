@@ -4,14 +4,6 @@ from sage.configuration import Configuration
 
 
 class PrintStatements(object):
-    """
-    Attributes:
-      openapi_types (dict): The key is attribute name
-                            and the value is attribute type.
-      attribute_map (dict): The key is attribute name
-                            and the value is json key in definition.
-    """
-
     openapi_types = {"days_overdue": "bool", "table_of_balances": "bool"}
     attribute_map = {
         "days_overdue": "days_overdue",

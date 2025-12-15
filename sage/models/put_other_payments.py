@@ -4,14 +4,6 @@ from sage.configuration import Configuration
 
 
 class PutOtherPayments(object):
-    """
-    Attributes:
-      openapi_types (dict): The key is attribute name
-                            and the value is attribute type.
-      attribute_map (dict): The key is attribute name
-                            and the value is json key in definition.
-    """
-
     openapi_types = {"other_payment": "PutOtherPaymentsOtherPayment"}
     attribute_map = {"other_payment": "other_payment"}
 

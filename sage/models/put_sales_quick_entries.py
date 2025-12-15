@@ -4,14 +4,6 @@ from sage.configuration import Configuration
 
 
 class PutSalesQuickEntries(object):
-    """
-    Attributes:
-      openapi_types (dict): The key is attribute name
-                            and the value is attribute type.
-      attribute_map (dict): The key is attribute name
-                            and the value is json key in definition.
-    """
-
     openapi_types = {"sales_quick_entry": "PutSalesQuickEntriesSalesQuickEntry"}
     attribute_map = {"sales_quick_entry": "sales_quick_entry"}
 

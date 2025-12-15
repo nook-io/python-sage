@@ -4,14 +4,6 @@ from sage.configuration import Configuration
 
 
 class PostHostedArtefactPaymentSettingsHostedArtefactPaymentSetting(object):
-    """
-    Attributes:
-      openapi_types (dict): The key is attribute name
-                            and the value is attribute type.
-      attribute_map (dict): The key is attribute name
-                            and the value is json key in definition.
-    """
-
     openapi_types = {"object_guid": "str", "disable_payment": "bool"}
     attribute_map = {"object_guid": "object_guid", "disable_payment": "disable_payment"}
 

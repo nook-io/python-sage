@@ -4,14 +4,6 @@ from sage.configuration import Configuration
 
 
 class PostOtherPaymentsOtherPaymentPaymentLines(object):
-    """
-    Attributes:
-      openapi_types (dict): The key is attribute name
-                            and the value is attribute type.
-      attribute_map (dict): The key is attribute name
-                            and the value is json key in definition.
-    """
-
     openapi_types = {
         "ledger_account_id": "str",
         "total_amount": "float",

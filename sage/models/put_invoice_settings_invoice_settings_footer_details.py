@@ -4,14 +4,6 @@ from sage.configuration import Configuration
 
 
 class PutInvoiceSettingsInvoiceSettingsFooterDetails(object):
-    """
-    Attributes:
-      openapi_types (dict): The key is attribute name
-                            and the value is attribute type.
-      attribute_map (dict): The key is attribute name
-                            and the value is json key in definition.
-    """
-
     openapi_types = {"column_1": "str", "column_2": "str", "column_3": "str"}
     attribute_map = {
         "column_1": "column_1",

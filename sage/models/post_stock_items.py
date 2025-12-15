@@ -4,14 +4,6 @@ from sage.configuration import Configuration
 
 
 class PostStockItems(object):
-    """
-    Attributes:
-      openapi_types (dict): The key is attribute name
-                            and the value is attribute type.
-      attribute_map (dict): The key is attribute name
-                            and the value is json key in definition.
-    """
-
     openapi_types = {"stock_item": "PostStockItemsStockItem"}
     attribute_map = {"stock_item": "stock_item"}
 

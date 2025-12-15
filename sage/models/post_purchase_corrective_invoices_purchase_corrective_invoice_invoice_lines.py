@@ -4,14 +4,6 @@ from sage.configuration import Configuration
 
 
 class PostPurchaseCorrectiveInvoicesPurchaseCorrectiveInvoiceInvoiceLines(object):
-    """
-    Attributes:
-      openapi_types (dict): The key is attribute name
-                            and the value is attribute type.
-      attribute_map (dict): The key is attribute name
-                            and the value is json key in definition.
-    """
-
     openapi_types = {
         "is_purchase_for_resale": "bool",
         "description": "str",

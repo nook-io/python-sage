@@ -4,14 +4,6 @@ from sage.configuration import Configuration
 
 
 class PutContactAllocations(object):
-    """
-    Attributes:
-      openapi_types (dict): The key is attribute name
-                            and the value is attribute type.
-      attribute_map (dict): The key is attribute name
-                            and the value is json key in definition.
-    """
-
     openapi_types = {"contact_allocation": "PutContactAllocationsContactAllocation"}
     attribute_map = {"contact_allocation": "contact_allocation"}
 

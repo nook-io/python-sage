@@ -4,14 +4,6 @@ from sage.configuration import Configuration
 
 
 class PutBusinessSettings(object):
-    """
-    Attributes:
-      openapi_types (dict): The key is attribute name
-                            and the value is attribute type.
-      attribute_map (dict): The key is attribute name
-                            and the value is json key in definition.
-    """
-
     openapi_types = {"business_settings": "PutBusinessSettingsBusinessSettings"}
     attribute_map = {"business_settings": "business_settings"}
 

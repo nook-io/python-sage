@@ -4,14 +4,6 @@ from sage.configuration import Configuration
 
 
 class PostSalesEstimates(object):
-    """
-    Attributes:
-      openapi_types (dict): The key is attribute name
-                            and the value is attribute type.
-      attribute_map (dict): The key is attribute name
-                            and the value is json key in definition.
-    """
-
     openapi_types = {"sales_estimate": "PostSalesEstimatesSalesEstimate"}
     attribute_map = {"sales_estimate": "sales_estimate"}
 

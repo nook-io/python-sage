@@ -4,14 +4,6 @@ from sage.configuration import Configuration
 
 
 class ContactCisSettings(object):
-    """
-    Attributes:
-      openapi_types (dict): The key is attribute name
-                            and the value is attribute type.
-      attribute_map (dict): The key is attribute name
-                            and the value is json key in definition.
-    """
-
     openapi_types = {
         "registered_cis_name": "str",
         "subcontractor_verification_number": "str",

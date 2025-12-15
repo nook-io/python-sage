@@ -4,14 +4,6 @@ from sage.configuration import Configuration
 
 
 class PutUserUser(object):
-    """
-    Attributes:
-      openapi_types (dict): The key is attribute name
-                            and the value is attribute type.
-      attribute_map (dict): The key is attribute name
-                            and the value is json key in definition.
-    """
-
     openapi_types = {
         "first_name": "str",
         "last_name": "str",

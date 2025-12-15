@@ -4,14 +4,6 @@ from sage.configuration import Configuration
 
 
 class InvoiceSettings(object):
-    """
-    Attributes:
-      openapi_types (dict): The key is attribute name
-                            and the value is attribute type.
-      attribute_map (dict): The key is attribute name
-                            and the value is json key in definition.
-    """
-
     openapi_types = {
         "path": "str",
         "next_invoice_number": "int",

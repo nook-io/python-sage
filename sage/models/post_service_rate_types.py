@@ -4,14 +4,6 @@ from sage.configuration import Configuration
 
 
 class PostServiceRateTypes(object):
-    """
-    Attributes:
-      openapi_types (dict): The key is attribute name
-                            and the value is attribute type.
-      attribute_map (dict): The key is attribute name
-                            and the value is json key in definition.
-    """
-
     openapi_types = {"service_rate_type": "PostServiceRateTypesServiceRateType"}
     attribute_map = {"service_rate_type": "service_rate_type"}
 

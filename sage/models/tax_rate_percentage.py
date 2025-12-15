@@ -4,14 +4,6 @@ from sage.configuration import Configuration
 
 
 class TaxRatePercentage(object):
-    """
-    Attributes:
-      openapi_types (dict): The key is attribute name
-                            and the value is attribute type.
-      attribute_map (dict): The key is attribute name
-                            and the value is json key in definition.
-    """
-
     openapi_types = {"percentage": "float", "from_date": "date", "to_date": "date"}
     attribute_map = {
         "percentage": "percentage",

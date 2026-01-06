@@ -1,5 +1,7 @@
 import pprint
+
 import six
+
 from sage.configuration import Configuration
 
 
@@ -362,14 +364,6 @@ class ContactPaymentPush(object):
 
     @reference.setter
     def reference(self, reference):
-        if (
-            self.local_vars_configuration.client_side_validation
-            and reference is not None
-            and len(reference) > 25
-        ):
-            raise ValueError(
-                "Invalid value for `reference`, length must be less than or equal to `25`"
-            )
         self._reference = reference
 
     @property

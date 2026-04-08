@@ -1,0 +1,22 @@
+[build-system]
+requires = ["uv_build>=0.11.4,<0.12"]
+build-backend = "uv_build"
+
+[project]
+name = "python-sage"
+version = "1.0.2"
+description = "Sage Business Cloud Accounting - Accounts"
+readme = "README.md"
+authors = [
+  { name = "Sage Business Cloud Accounting API Team", email = "team@openapitools.org" },
+]
+keywords = [
+  "OpenAPI",
+  "OpenAPI-Generator",
+  "Sage Business Cloud Accounting - Accounts",
+]
+dependencies = ["urllib3>=1.15", "certifi", "python-dateutil"]
+
+[tool.uv.build-backend]
+module-name = "sage"
+module-root = ""

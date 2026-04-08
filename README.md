@@ -34,14 +34,17 @@ Then import the package:
 import sage
 ```
 
-### Setuptools
+### From a checkout
 
-Install via [Setuptools](http://pypi.python.org/pypi/setuptools).
+Install with [pip](https://pip.pypa.io/) or [uv](https://docs.astral.sh/uv/):
 
 ```sh
-python setup.py install --user
+pip install .
 ```
-(or `sudo python setup.py install` to install the package for all users)
+
+```sh
+uv pip install .
+```
 
 Then import the package:
 ```python

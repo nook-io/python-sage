@@ -353,15 +353,7 @@ class Contact(object):
 
     @reference.setter
     def reference(self, reference):
-        if (
-            self.local_vars_configuration.client_side_validation
-            and reference is not None
-            and len(reference) > 10
-        ):
-            raise ValueError(
-                "Invalid value for `reference`, length must be less than or equal to `10`"
-            )
-        self._reference = reference
+        self._reference = reference[:10] if reference else None
 
     @property
     def default_sales_ledger_account(self):

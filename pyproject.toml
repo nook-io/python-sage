@@ -4,7 +4,7 @@ build-backend = "uv_build"
 
 [project]
 name = "python-sage"
-version = "1.0.2"
+version = "1.0.3"
 description = "Sage Business Cloud Accounting - Accounts"
 readme = "README.md"
 authors = [
